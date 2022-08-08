@@ -45,11 +45,11 @@
         android:id="@+id/textGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/edt_email"
+        android:gravity="center"
         android:text="Gender"
         android:textSize="20sp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/pick_gender"/>
+        app:layout_constraintBottom_toTopOf="@id/pick_gender"
+        app:layout_constraintTop_toBottomOf="@id/edt_email" />
 
     <RadioGroup
         android:id="@+id/pick_gender"
@@ -87,9 +87,9 @@
         android:id="@+id/DataForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/btn_submit"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/btn_submit" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

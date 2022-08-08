@@ -4,6 +4,7 @@ import android.content.Intent
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -37,5 +38,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, FormActivity::class.java))
         }
     }
-
 }

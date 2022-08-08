@@ -5,15 +5,15 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
-import com.kotlin.philippl_androidfundamentals.databinding.ToastsBinding
+import com.kotlin.philippl_androidfundamentals.databinding.ActivityToastsBinding
 
 class ToastsActivity : AppCompatActivity() {
 
-    private lateinit var binding: ToastsBinding
+    private lateinit var binding: ActivityToastsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ToastsBinding.inflate(layoutInflater)
+        binding = ActivityToastsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         supportActionBar?.title = "Toast"
