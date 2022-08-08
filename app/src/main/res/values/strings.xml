@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Philipp L - Android Fundamentals</string>
+    <string-array name="Gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="form">
+        ===========Data Lengkap==============\n
+        Nama          : %1$s %2$s\n
+        Email         : %3$s\n
+        Jenis Kelamin : %4$s
+    </string>
+</resources>
