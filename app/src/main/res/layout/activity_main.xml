@@ -36,4 +36,33 @@
         android:layout_marginBottom="10dp"
         android:text="Activity Form"/>
 
+    <Button
+        android:id="@+id/btnRequestPermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Request Permission"/>
+
+    <Button
+        android:id="@+id/btnImplicitIntents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Implicit Intents"/>
+
+    <Button
+        android:id="@+id/btnToolbarMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Toolbar Menu"/>
+
+    <Button
+        android:id="@+id/btnAlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alert Dialog"/>
+
+
+
 </LinearLayout>

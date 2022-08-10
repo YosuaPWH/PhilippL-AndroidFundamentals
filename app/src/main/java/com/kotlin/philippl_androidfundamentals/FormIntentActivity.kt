@@ -24,9 +24,7 @@ class FormIntentActivity : AppCompatActivity() {
             person.email,
             person.gender
         )
-        binding.intentTextView.text.apply {
-            getColor(R.color.black)
-        }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
