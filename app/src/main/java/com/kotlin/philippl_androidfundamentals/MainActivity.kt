@@ -56,6 +56,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, AlertDialogActivity::class.java))
         }
 
+        binding.btnInflaterActivity.setOnClickListener {
+            startActivity(Intent(this, InflaterActivity::class.java))
+        }
+
+        binding.btnSpinner.setOnClickListener {
+            Intent(this, SpinnerActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+
     }
 
     private fun hasWriteExternalStoragePermission() =

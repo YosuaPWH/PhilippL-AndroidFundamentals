@@ -61,7 +61,21 @@
         android:id="@+id/btnAlertDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="Alert Dialog"/>
+
+    <Button
+        android:id="@+id/btnInflaterActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Inflater Activity"/>
+
+    <Button
+        android:id="@+id/btnSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spinner Activity"/>
 
 
 

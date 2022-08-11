@@ -12,6 +12,8 @@ import com.kotlin.philippl_androidfundamentals.databinding.ActivityAlertDialogBi
 class AlertDialogActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAlertDialogBinding
+    private val options = arrayOf("First Item", "Second Item", "Third Item")
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +22,21 @@ class AlertDialogActivity : AppCompatActivity() {
         supportActionBar?.title = "Alert Dialog"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val addContactDialog = AlertDialog.Builder(this)
+        binding.btnAlert1.setOnClickListener {
+            addContactDialog()
+        }
+
+        binding.btnAlert2.setOnClickListener {
+            singleChoiceDialog()
+        }
+
+        binding.btnAlert3.setOnClickListener {
+            multiChoiceDialog()
+        }
+    }
+
+    private fun addContactDialog() {
+        AlertDialog.Builder(this)
             .setTitle("Add Contact")
             .setMessage("Do you want to add Mr. Poop to your contacts list?")
             .setIcon(R.drawable.ic_add_contact)
@@ -33,14 +49,11 @@ class AlertDialogActivity : AppCompatActivity() {
                 Snackbar.make(binding.root, "You didn't add Mr. Poop to your contact list", Snackbar.LENGTH_SHORT)
                     .setBackgroundTint(resources.getColor(R.color.purple_500))
                     .show()
-            }.create()
+            }.show()
+    }
 
-        binding.btnAlert1.setOnClickListener {
-            addContactDialog.show()
-        }
-
-        val options = arrayOf("First Item", "Second Item", "Third Item")
-        val singleChoiceDialog = AlertDialog.Builder(this)
+    private fun singleChoiceDialog() {
+        AlertDialog.Builder(this)
             .setTitle("Choose one of these options")
             .setSingleChoiceItems(options, 0) { _, i ->
 //                Snackbar.make(binding.btnAlert2, "You Clicked on ${options[i]}", Snackbar.LENGTH_SHORT)
@@ -57,15 +70,11 @@ class AlertDialogActivity : AppCompatActivity() {
                 Snackbar.make(binding.btnAlert2, "You declined the SingleChoiceDialog", Snackbar.LENGTH_SHORT)
                     .setBackgroundTint(resources.getColor(R.color.purple_500))
                     .show()
-            }.create()
+            }.show()
+    }
 
-        binding.btnAlert2.setOnClickListener {
-            singleChoiceDialog.show()
-        }
-
-
-
-        val multiChoiceDialog = AlertDialog.Builder(this)
+    private fun multiChoiceDialog() {
+        AlertDialog.Builder(this)
             .setTitle("Choose one of these options")
             .setMultiChoiceItems(options, booleanArrayOf(false, false, false)) { _, i, isChecked ->
                 if (isChecked) {
@@ -83,11 +92,7 @@ class AlertDialogActivity : AppCompatActivity() {
                 Snackbar.make(binding.btnAlert2, "You declined the MultiChoiceDialog", Snackbar.LENGTH_SHORT)
                     .setBackgroundTint(resources.getColor(R.color.purple_500))
                     .show()
-            }.create()
-
-        binding.btnAlert3.setOnClickListener {
-            multiChoiceDialog.show()
-        }
+            }.show()
     }
 
     override fun onSupportNavigateUp(): Boolean {
