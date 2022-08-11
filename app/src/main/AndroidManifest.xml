@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhilippLAndroidFundamentals"
         tools:targetApi="31">
+        <activity android:name=".activity.RecyclerViewTodoAppActivity" />
         <activity android:name=".activity.SpinnerActivity" />
         <activity android:name=".activity.AlertDialogActivity" />
         <activity android:name=".activity.ToolbarMenuActivity" />

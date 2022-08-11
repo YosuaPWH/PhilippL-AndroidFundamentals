@@ -67,6 +67,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        bindMainActivity.btnRecyclerView.setOnClickListener {
+            startActivity(Intent(this, RecyclerViewTodoAppActivity::class.java))
+        }
+
     }
 
     private fun hasWriteExternalStoragePermission() =
