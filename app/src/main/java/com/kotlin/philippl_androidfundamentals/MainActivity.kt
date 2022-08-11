@@ -6,6 +6,8 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import androidx.core.app.ActivityCompat
 import com.kotlin.philippl_androidfundamentals.activity.*
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityMainBinding
@@ -71,6 +73,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, RecyclerViewTodoAppActivity::class.java))
         }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.next -> startActivity(Intent(this, MainActivity2::class.java))
+        }
+        return true
     }
 
     private fun hasWriteExternalStoragePermission() =

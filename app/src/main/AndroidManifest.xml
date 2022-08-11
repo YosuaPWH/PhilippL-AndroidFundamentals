@@ -36,6 +36,7 @@
         <activity android:name=".activity.FormActivity" />
         <activity android:name=".activity.ImplicitIntentsActivity" />
         <activity android:name=".activity.InflaterActivity" />
+        <activity android:name=".MainActivity2" />
     </application>
 
 </manifest>
