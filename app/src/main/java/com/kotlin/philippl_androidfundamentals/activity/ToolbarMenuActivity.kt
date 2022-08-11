@@ -1,12 +1,12 @@
-package com.kotlin.philippl_androidfundamentals
+package com.kotlin.philippl_androidfundamentals.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
+import com.kotlin.philippl_androidfundamentals.R
 
 class ToolbarMenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

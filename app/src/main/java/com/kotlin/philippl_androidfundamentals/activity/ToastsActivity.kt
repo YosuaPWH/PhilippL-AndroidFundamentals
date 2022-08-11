@@ -1,10 +1,10 @@
-package com.kotlin.philippl_androidfundamentals
+package com.kotlin.philippl_androidfundamentals.activity
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
+import com.kotlin.philippl_androidfundamentals.R
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityToastsBinding
 
 class ToastsActivity : AppCompatActivity() {

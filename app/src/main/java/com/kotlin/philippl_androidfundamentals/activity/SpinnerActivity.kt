@@ -1,9 +1,10 @@
-package com.kotlin.philippl_androidfundamentals
+package com.kotlin.philippl_androidfundamentals.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.kotlin.philippl_androidfundamentals.databinding.ActivitySpinnerBinding
 
@@ -17,6 +18,12 @@ class SpinnerActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.title = "Spinner"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
+        val listMonth = listOf("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+        val adapter = ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, listMonth)
+
+        binding.spinnerBulan.adapter = adapter
 
         binding.spinnerBulan.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(p0: AdapterView<*>?) {

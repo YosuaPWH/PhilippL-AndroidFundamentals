@@ -1,11 +1,9 @@
-package com.kotlin.philippl_androidfundamentals
+package com.kotlin.philippl_androidfundamentals.activity
 
 import android.os.Bundle
 import android.os.Handler
-import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.updateLayoutParams
+import com.kotlin.philippl_androidfundamentals.R
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityImageBinding
 
 class ImageActivity : AppCompatActivity() {

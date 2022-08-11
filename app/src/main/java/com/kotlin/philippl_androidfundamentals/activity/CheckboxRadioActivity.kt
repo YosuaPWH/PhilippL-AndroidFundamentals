@@ -1,4 +1,4 @@
-package com.kotlin.philippl_androidfundamentals
+package com.kotlin.philippl_androidfundamentals.activity
 
 import android.os.Bundle
 import android.widget.RadioButton

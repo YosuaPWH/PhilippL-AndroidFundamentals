@@ -1,4 +1,4 @@
-package com.kotlin.philippl_androidfundamentals
+package com.kotlin.philippl_androidfundamentals.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
+import com.kotlin.philippl_androidfundamentals.Person
+import com.kotlin.philippl_androidfundamentals.R
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityFormBinding
 
 class FormActivity : AppCompatActivity() {

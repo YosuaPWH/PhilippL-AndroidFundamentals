@@ -1,9 +1,10 @@
-package com.kotlin.philippl_androidfundamentals
+package com.kotlin.philippl_androidfundamentals.activity
 
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.kotlin.philippl_androidfundamentals.R
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityInflaterBinding
 
 class InflaterActivity : AppCompatActivity() {

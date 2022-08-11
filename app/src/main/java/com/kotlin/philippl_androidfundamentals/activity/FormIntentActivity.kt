@@ -1,7 +1,9 @@
-package com.kotlin.philippl_androidfundamentals
+package com.kotlin.philippl_androidfundamentals.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.kotlin.philippl_androidfundamentals.Person
+import com.kotlin.philippl_androidfundamentals.R
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityFormIntentBinding
 
 class FormIntentActivity : AppCompatActivity() {

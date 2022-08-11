@@ -7,60 +7,61 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.core.app.ActivityCompat
+import com.kotlin.philippl_androidfundamentals.activity.*
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var bindMainActivity: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        bindMainActivity = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(bindMainActivity.root)
 
         supportActionBar?.title = "Android Fundamentals"
 
-        binding.btnActvImage.setOnClickListener {
+        bindMainActivity.btnActvImage.setOnClickListener {
             Intent(this, ImageActivity::class.java).apply {
                 startActivity(this)
             }
         }
 
-        binding.btnCkboxRdio.setOnClickListener {
+        bindMainActivity.btnCkboxRdio.setOnClickListener {
             Intent(this, CheckboxRadioActivity::class.java).also {
                 startActivity(it)
             }
         }
 
-        binding.btnToasts.setOnClickListener {
+        bindMainActivity.btnToasts.setOnClickListener {
             startActivity(Intent(this, ToastsActivity::class.java))
         }
 
-        binding.btnForm.setOnClickListener {
+        bindMainActivity.btnForm.setOnClickListener {
             startActivity(Intent(this, FormActivity::class.java))
         }
 
-        binding.btnRequestPermission.setOnClickListener {
+        bindMainActivity.btnRequestPermission.setOnClickListener {
             requestPermissions()
         }
 
-        binding.btnImplicitIntents.setOnClickListener {
+        bindMainActivity.btnImplicitIntents.setOnClickListener {
             startActivity(Intent(this, ImplicitIntentsActivity::class.java))
         }
 
-        binding.btnToolbarMenu.setOnClickListener {
+        bindMainActivity.btnToolbarMenu.setOnClickListener {
             startActivity(Intent(this, ToolbarMenuActivity::class.java))
         }
 
-        binding.btnAlertDialog.setOnClickListener {
+        bindMainActivity.btnAlertDialog.setOnClickListener {
             startActivity(Intent(this, AlertDialogActivity::class.java))
         }
 
-        binding.btnInflaterActivity.setOnClickListener {
+        bindMainActivity.btnInflaterActivity.setOnClickListener {
             startActivity(Intent(this, InflaterActivity::class.java))
         }
 
-        binding.btnSpinner.setOnClickListener {
+        bindMainActivity.btnSpinner.setOnClickListener {
             Intent(this, SpinnerActivity::class.java).apply {
                 startActivity(this)
             }

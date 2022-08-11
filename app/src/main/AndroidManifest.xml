@@ -16,10 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhilippLAndroidFundamentals"
         tools:targetApi="31">
-        <activity android:name=".SpinnerActivity" />
-        <activity android:name=".AlertDialogActivity" />
-        <activity android:name=".ToolbarMenuActivity" />
-        <activity android:name=".FormIntentActivity" />
+        <activity android:name=".activity.SpinnerActivity" />
+        <activity android:name=".activity.AlertDialogActivity" />
+        <activity android:name=".activity.ToolbarMenuActivity" />
+        <activity android:name=".activity.FormIntentActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -29,12 +29,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ImageActivity" />
-        <activity android:name=".CheckboxRadioActivity" />
-        <activity android:name=".ToastsActivity" />
-        <activity android:name=".FormActivity" />
-        <activity android:name=".ImplicitIntentsActivity" />
-        <activity android:name=".InflaterActivity" />
+        <activity android:name=".activity.ImageActivity" />
+        <activity android:name=".activity.CheckboxRadioActivity" />
+        <activity android:name=".activity.ToastsActivity" />
+        <activity android:name=".activity.FormActivity" />
+        <activity android:name=".activity.ImplicitIntentsActivity" />
+        <activity android:name=".activity.InflaterActivity" />
     </application>
 
 </manifest>
