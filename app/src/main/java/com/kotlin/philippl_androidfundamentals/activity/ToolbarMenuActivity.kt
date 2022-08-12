@@ -25,7 +25,7 @@ class ToolbarMenuActivity : AppCompatActivity() {
             R.id.favorites -> snackbar("You clicked on Favorite")
             R.id.settings -> snackbar("You clicked on Setting")
             R.id.feedback -> snackbar("You clicked on Feedback")
-            R.id.backMain -> onBackPressed()
+            R.id.backMain -> finish()
         }
         return true
     }

@@ -36,6 +36,8 @@ class FormActivity : AppCompatActivity() {
                 Intent(this, FormIntentActivity::class.java).apply {
                     this.putExtra("EXTRA_PERSON", person)
                     startActivity(this)
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+                    finish()
                 }
 
             } else {
@@ -52,7 +54,7 @@ class FormActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
+        finish()
         return super.onSupportNavigateUp()
     }
 }

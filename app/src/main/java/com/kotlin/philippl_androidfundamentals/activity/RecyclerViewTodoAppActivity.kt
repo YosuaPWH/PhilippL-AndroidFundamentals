@@ -3,6 +3,7 @@ package com.kotlin.philippl_androidfundamentals.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.kotlin.philippl_androidfundamentals.R
 import com.kotlin.philippl_androidfundamentals.Todo
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityRecyclerViewTodoAppBinding
 
@@ -37,7 +38,7 @@ class RecyclerViewTodoAppActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
+        finish()
         return super.onSupportNavigateUp()
     }
 }

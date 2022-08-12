@@ -3,6 +3,7 @@ package com.kotlin.philippl_androidfundamentals.activity
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.kotlin.philippl_androidfundamentals.R
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityImplicitIntentsBinding
 
 class ImplicitIntentsActivity : AppCompatActivity() {
@@ -43,7 +44,7 @@ class ImplicitIntentsActivity : AppCompatActivity() {
 //    }
 
     override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
+        finish()
         return super.onSupportNavigateUp()
     }
 

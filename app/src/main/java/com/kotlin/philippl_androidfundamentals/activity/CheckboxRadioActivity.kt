@@ -3,6 +3,7 @@ package com.kotlin.philippl_androidfundamentals.activity
 import android.os.Bundle
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
+import com.kotlin.philippl_androidfundamentals.R
 import com.kotlin.philippl_androidfundamentals.databinding.CheckboxRadiobuttonBinding
 
 class CheckboxRadioActivity : AppCompatActivity() {
@@ -36,7 +37,7 @@ class CheckboxRadioActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
+        finish()
         return super.onSupportNavigateUp()
     }
 }
