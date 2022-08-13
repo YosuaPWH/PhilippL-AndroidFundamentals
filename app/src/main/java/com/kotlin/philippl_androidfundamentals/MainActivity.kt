@@ -1,20 +1,16 @@
 package com.kotlin.philippl_androidfundamentals
 
-import android.Manifest
-import android.content.Intent
-import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
-import androidx.core.app.ActivityCompat
-import com.kotlin.philippl_androidfundamentals.activity.*
+import androidx.fragment.app.Fragment
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var bindMainActivity: ActivityMainBinding
+    private val aa = MainActivityFragmentFirst()
+    private val bb = MainActivityFragmentSecond()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,106 +18,75 @@ class MainActivity : AppCompatActivity() {
         setContentView(bindMainActivity.root)
 
         supportActionBar?.title = "Android Fundamentals"
+        makeCurrentFragment(aa)
 
-        bindMainActivity.btnActvImage.setOnClickListener {
-            Intent(this, ImageActivity::class.java).apply {
-                startActivity(this)
+        bindMainActivity.bottomNav.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.miHome -> makeCurrentFragment(aa)
+                R.id.miMessage -> makeCurrentFragment(bb)
             }
-        }
-
-        bindMainActivity.btnCkboxRdio.setOnClickListener {
-            Intent(this, CheckboxRadioActivity::class.java).also {
-                startActivity(it)
-            }
-        }
-
-        bindMainActivity.btnToasts.setOnClickListener {
-            startActivity(Intent(this, ToastsActivity::class.java))
-        }
-
-        bindMainActivity.btnForm.setOnClickListener {
-            startActivity(Intent(this, FormActivity::class.java))
-        }
-
-        bindMainActivity.btnRequestPermission.setOnClickListener {
-            requestPermissions()
-        }
-
-        bindMainActivity.btnImplicitIntents.setOnClickListener {
-            startActivity(Intent(this, ImplicitIntentsActivity::class.java))
-        }
-
-        bindMainActivity.btnToolbarMenu.setOnClickListener {
-            startActivity(Intent(this, ToolbarMenuActivity::class.java))
-        }
-
-        bindMainActivity.btnAlertDialog.setOnClickListener {
-            startActivity(Intent(this, AlertDialogActivity::class.java))
-        }
-
-        bindMainActivity.btnInflaterActivity.setOnClickListener {
-            startActivity(Intent(this, InflaterActivity::class.java))
-        }
-
-        bindMainActivity.btnSpinner.setOnClickListener {
-            Intent(this, SpinnerActivity::class.java).apply {
-                startActivity(this)
-            }
-        }
-
-        bindMainActivity.btnRecyclerView.setOnClickListener {
-            startActivity(Intent(this, RecyclerViewTodoAppActivity::class.java))
+            true
         }
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.main_menu, menu)
+//        return super.onCreateOptionsMenu(menu)
+//    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.next -> startActivity(Intent(this, MainActivity2::class.java))
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when (item.itemId) {
+//            R.id.next -> startActivity(Intent(this, MainActivity2::class.java))
+//        }
+//        return true
+//    }
+
+    private fun makeCurrentFragment(frg: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.flActivityMain, frg)
+//            addToBackStack(null)
+            commit()
         }
-        return true
     }
 
-    private fun hasWriteExternalStoragePermission() =
-        ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
+//    private fun hasWriteExternalStoragePermission() =
+//        ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
+//
+//    private fun hasLocationForegroundPermission() =
+//        ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
+//
+//    private fun hasLocationBackgroundPermission() =
+//        ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_BACKGROUND_LOCATION) == PackageManager.PERMISSION_GRANTED
+//
+//    private fun requestPermissions() {
+//        var permissionToRequest = mutableListOf<String>()
+//        if (!hasWriteExternalStoragePermission())
+//            permissionToRequest.add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+//
+//        if (!hasLocationForegroundPermission())
+//            permissionToRequest.add(Manifest.permission.ACCESS_COARSE_LOCATION)
+//
+//        if (!hasLocationBackgroundPermission() && hasLocationForegroundPermission())
+//            permissionToRequest.add(Manifest.permission.ACCESS_BACKGROUND_LOCATION)
+//
+//        if (permissionToRequest.isNotEmpty())
+//            ActivityCompat.requestPermissions(this, permissionToRequest.toTypedArray(), 0)
+//    }
+//
+//    override fun onRequestPermissionsResult(
+//        requestCode: Int,
+//        permissions: Array<out String>,
+//        grantResults: IntArray
+//    ) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+//        if (requestCode == 0 && grantResults.isNotEmpty())
+//            for (i in grantResults.indices)
+//                if (grantResults[i] == PackageManager.PERMISSION_GRANTED)
+//                    Log.d("PermissionRequest", "${permissions[i]} granted")
+//    }
 
-    private fun hasLocationForegroundPermission() =
-        ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
 
-    private fun hasLocationBackgroundPermission() =
-        ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_BACKGROUND_LOCATION) == PackageManager.PERMISSION_GRANTED
-
-    private fun requestPermissions() {
-        var permissionToRequest = mutableListOf<String>()
-        if (!hasWriteExternalStoragePermission())
-           permissionToRequest.add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-
-        if (!hasLocationForegroundPermission())
-            permissionToRequest.add(Manifest.permission.ACCESS_COARSE_LOCATION)
-
-        if (!hasLocationBackgroundPermission() && hasLocationForegroundPermission())
-            permissionToRequest.add(Manifest.permission.ACCESS_BACKGROUND_LOCATION)
-
-        if (permissionToRequest.isNotEmpty())
-            ActivityCompat.requestPermissions(this, permissionToRequest.toTypedArray(), 0)
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == 0 && grantResults.isNotEmpty())
-            for (i in grantResults.indices)
-                if (grantResults[i] == PackageManager.PERMISSION_GRANTED)
-                    Log.d("PermissionRequest", "${permissions[i]} granted")
-    }
 
 
 
