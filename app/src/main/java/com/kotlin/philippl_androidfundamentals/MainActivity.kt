@@ -8,22 +8,22 @@ import com.kotlin.philippl_androidfundamentals.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var bindMainActivity: ActivityMainBinding
-    private val aa = MainActivityFragmentFirst()
-    private val bb = MainActivityFragmentSecond()
+    private val maFragmentFirst = MainActivityFragmentFirst()
+    private val maFragmentSecond = MainActivityFragmentSecond()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindMainActivity = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindMainActivity.root)
-
         supportActionBar?.title = "Android Fundamentals"
-        makeCurrentFragment(aa)
+        
+        makeCurrentFragment(maFragmentFirst)
 
         bindMainActivity.bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.miHome -> makeCurrentFragment(aa)
-                R.id.miMessage -> makeCurrentFragment(bb)
+                R.id.miHome -> makeCurrentFragment(maFragmentFirst)
+                R.id.miMessage -> makeCurrentFragment(maFragmentSecond)
             }
             true
         }
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     private fun makeCurrentFragment(frg: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.flActivityMain, frg)
-//            addToBackStack(null)
+            addToBackStack(null)
             commit()
         }
     }
@@ -85,9 +85,5 @@ class MainActivity : AppCompatActivity() {
 //                if (grantResults[i] == PackageManager.PERMISSION_GRANTED)
 //                    Log.d("PermissionRequest", "${permissions[i]} granted")
 //    }
-
-
-
-
 
 }

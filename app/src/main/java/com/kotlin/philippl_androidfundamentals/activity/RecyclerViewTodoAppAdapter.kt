@@ -8,11 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kotlin.philippl_androidfundamentals.Todo
 import com.kotlin.philippl_androidfundamentals.databinding.LayoutItemTodoBinding
 
-class RecyclerViewTodoAppAdapter(
-    var todos: List<Todo>
-) : RecyclerView.Adapter<RecyclerViewTodoAppAdapter.TodoViewHolder>() {
+class RecyclerViewTodoAppAdapter(private val todos: List<Todo>) :
+    RecyclerView.Adapter<RecyclerViewTodoAppAdapter.TodoViewHolder>() {
 
-    inner class TodoViewHolder(val binding: LayoutItemTodoBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class TodoViewHolder(val binding: LayoutItemTodoBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

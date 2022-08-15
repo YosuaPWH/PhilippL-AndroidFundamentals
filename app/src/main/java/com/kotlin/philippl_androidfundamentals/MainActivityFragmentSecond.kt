@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kotlin.philippl_androidfundamentals.activity.RecyclerViewTodoAppActivity
+import com.kotlin.philippl_androidfundamentals.activity.ViewPagerActivity
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityMainFragment2Binding
 import com.kotlin.philippl_androidfundamentals.fragment.FragmentActivity
 
@@ -33,6 +34,10 @@ class MainActivityFragmentSecond : Fragment() {
 
         binding.btnRecyclerView.setOnClickListener {
             startActivity(Intent(activity, RecyclerViewTodoAppActivity::class.java))
+        }
+
+        binding.btnViewPager.setOnClickListener {
+            startActivity(Intent(activity, ViewPagerActivity::class.java))
         }
     }
 

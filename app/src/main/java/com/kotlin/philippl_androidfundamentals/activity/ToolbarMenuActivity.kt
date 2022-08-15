@@ -34,8 +34,8 @@ class ToolbarMenuActivity : AppCompatActivity() {
         val contextView = findViewById<View>(R.id.btnTest)
         Snackbar.make(contextView, str, Snackbar.LENGTH_SHORT)
             .setAction("Okay!") {}
-            .setActionTextColor(resources.getColor(R.color.white))
-            .setBackgroundTint(resources.getColor(R.color.purple_500))
+            .setActionTextColor(resources.getColor(R.color.white, theme))
+            .setBackgroundTint(resources.getColor(R.color.purple_500, theme))
             .show()
     }
 }

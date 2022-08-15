@@ -2,6 +2,7 @@ package com.kotlin.philippl_androidfundamentals.activity
 
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.kotlin.philippl_androidfundamentals.R
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityImageBinding
@@ -19,7 +20,7 @@ class ImageActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.btnAddimage.setOnClickListener {
-            Handler().postDelayed({
+            Handler(Looper.getMainLooper()).postDelayed({
                 binding.imgvImage.setImageResource(0)
                 finish()
             }, 1000)

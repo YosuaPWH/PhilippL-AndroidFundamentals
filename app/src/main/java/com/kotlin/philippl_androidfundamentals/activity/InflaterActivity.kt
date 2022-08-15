@@ -29,8 +29,8 @@ class InflaterActivity : AppCompatActivity() {
         konten.addView(sub1)
         konten.addView(sub2)
 
-        val dwada = binding.root.findViewById<LinearLayout>(R.id.konten_view)
-        dwada.setBackgroundColor(resources.getColor(R.color.teal_700))
+        val konten = binding.root.findViewById<LinearLayout>(R.id.konten_view)
+        konten.setBackgroundColor(resources.getColor(R.color.teal_700, theme))
 
     }
 

@@ -24,8 +24,8 @@ class ToastsActivity : AppCompatActivity() {
             val contextView = findViewById<View>(R.id.btn_toast)
             Snackbar.make(contextView, "This is Snackbar", Snackbar.LENGTH_SHORT)
                 .setAction("Okay!") {}
-                .setActionTextColor(resources.getColor(R.color.black))
-                .setBackgroundTint(resources.getColor(R.color.purple_200))
+                .setActionTextColor(resources.getColor(R.color.black, theme))
+                .setBackgroundTint(resources.getColor(R.color.purple_200, theme))
                 .show()
         }
     }

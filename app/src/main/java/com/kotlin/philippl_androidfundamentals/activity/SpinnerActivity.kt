@@ -21,7 +21,20 @@ class SpinnerActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
-        val listMonth = listOf("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+        val listMonth = listOf(
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        )
         val adapter = ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, listMonth)
 
         binding.spinnerBulan.adapter = adapter

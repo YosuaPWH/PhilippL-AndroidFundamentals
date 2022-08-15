@@ -8,14 +8,21 @@
         android:id="@+id/btnFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="12dp"
         android:text="Fragment Parent"/>
 
     <Button
         android:id="@+id/btnRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="12dp"
         android:text="Recycler View (Todo APP)"/>
+
+    <Button
+        android:id="@+id/btnViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="View Pager"/>
 
 </LinearLayout>

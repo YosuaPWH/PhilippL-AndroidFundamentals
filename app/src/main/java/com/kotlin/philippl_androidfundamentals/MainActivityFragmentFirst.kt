@@ -19,7 +19,6 @@ class MainActivityFragmentFirst : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        return super.onCreateView(inflater, container, savedInstanceState)
         _binding = ActivityMainFragment1Binding.inflate(inflater, container, false)
         return binding.root
     }
@@ -81,17 +80,6 @@ class MainActivityFragmentFirst : Fragment() {
             }
         }
     }
-
-//    private var activityResultLauncher: ActivityResultLauncher<Array<String>> =
-//        registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
-////            requestPermissions(it.keys, 0)
-////            for (b in it) {
-//////                if (b) {
-//                    Log.d("PermissionRequest", "${it.keys} ${it.values}")
-//////                }
-////            }
-//        }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

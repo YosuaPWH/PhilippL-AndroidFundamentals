@@ -30,7 +30,8 @@ class FormActivity : AppCompatActivity() {
             val gender = findViewById<RadioButton>(genderGroup)
 
             if (firstName != "" && lastName != "" && email != "" && gender != null) {
-                binding.DataForm.text = resources.getString(R.string.form, firstName, lastName, email, gender.text)
+                binding.DataForm.text =
+                    resources.getString(R.string.form, firstName, lastName, email, gender.text)
 
                 val person = Person(firstName, lastName, email, gender.text.toString())
                 Intent(this, FormIntentActivity::class.java).apply {

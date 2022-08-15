@@ -11,92 +11,10 @@
         android:id="@+id/flActivityMain"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:padding="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="match_parent"-->
-        <!--            android:orientation="vertical">-->
-
-        <!--            <Button-->
-        <!--                android:id="@+id/btn_actv_image"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginBottom="12dp"-->
-        <!--                android:text="Activity Image" />-->
-
-        <!--            <Button-->
-        <!--                android:id="@+id/btn_toasts"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginBottom="12dp"-->
-        <!--                android:text="Activity Toasts" />-->
-
-        <!--            <Button-->
-        <!--                android:id="@+id/btn_ckbox_rdio"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginBottom="12dp"-->
-        <!--                android:text="Checkbox &amp; Radio Button" />-->
-
-        <!--            <Button-->
-        <!--                android:id="@+id/btn_form"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginBottom="12dp"-->
-        <!--                android:text="Activity Form" />-->
-
-        <!--            <Button-->
-        <!--                android:id="@+id/btnRequestPermission"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginBottom="12dp"-->
-        <!--                android:text="Request Permission" />-->
-
-        <!--            <Button-->
-        <!--                android:id="@+id/btnImplicitIntents"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginBottom="12dp"-->
-        <!--                android:text="Implicit Intents" />-->
-
-        <!--            <Button-->
-        <!--                android:id="@+id/btnToolbarMenu"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginBottom="12dp"-->
-        <!--                android:text="Toolbar Menu" />-->
-
-        <!--            <Button-->
-        <!--                android:id="@+id/btnAlertDialog"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginBottom="12dp"-->
-        <!--                android:text="Alert Dialog" />-->
-
-        <!--            <Button-->
-        <!--                android:id="@+id/btnInflaterActivity"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginBottom="12dp"-->
-        <!--                android:text="Inflater Activity" />-->
-
-        <!--            <Button-->
-        <!--                android:id="@+id/btnSpinner"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginBottom="12dp"-->
-        <!--                android:text="Spinner Activity" />-->
-
-        <!--        </LinearLayout>-->
-
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
