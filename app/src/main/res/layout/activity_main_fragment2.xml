@@ -46,4 +46,11 @@
         android:layout_marginBottom="12dp"
         android:text="Notifications"/>
 
+    <Button
+        android:id="@+id/btnIntentService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Intent Service"/>
+
 </LinearLayout>

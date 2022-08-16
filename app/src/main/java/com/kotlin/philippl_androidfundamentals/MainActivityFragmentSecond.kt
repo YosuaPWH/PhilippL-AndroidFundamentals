@@ -50,6 +50,10 @@ class MainActivityFragmentSecond : Fragment() {
         binding.btnNotifications.setOnClickListener {
             startActivity(Intent(activity, NotificationActivity::class.java))
         }
+
+        binding.btnIntentService.setOnClickListener {
+            startActivity(Intent(activity, MainIntentServiceActivity::class.java))
+        }
     }
 
     override fun onDestroyView() {

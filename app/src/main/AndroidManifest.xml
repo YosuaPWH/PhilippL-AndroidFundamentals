@@ -41,6 +41,8 @@
         <activity android:name=".activity.SlideableMenuActivity" />
         <activity android:name=".activity.SharedPreferencesActivity" />
         <activity android:name=".activity.NotificationActivity" />
+        <activity android:name=".activity.MainIntentServiceActivity" />
+        <service android:name=".activity.MyIntentService" />
     </application>
 
 </manifest>
