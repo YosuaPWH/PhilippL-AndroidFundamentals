@@ -1,5 +1,6 @@
 package com.kotlin.philippl_androidfundamentals.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -29,7 +30,14 @@ class ViewPagerActivity : AppCompatActivity() {
             R.drawable.trash,
         )
 
-        val adapterImg = ViewPagerAdapter(images)
+        val adapterImg = ViewPagerAdapter(images, object : ViewPagerAdapter.MyClickImage {
+            override fun click(img: Int) {
+                val intent = Intent(this@ViewPagerActivity, ImageActivity::class.java)
+                intent.putExtra(ImageActivity.EXTRA_IMAGE, img)
+                startActivity(intent)
+            }
+        })
+
         binding.viewPager.apply {
             adapter = adapterImg
 //            orientation = ViewPager2.ORIENTATION_VERTICAL
@@ -44,25 +52,19 @@ class ViewPagerActivity : AppCompatActivity() {
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 Toast.makeText(
-                    this@ViewPagerActivity,
-                    "Selected ${tab?.text}",
-                    Toast.LENGTH_SHORT
+                    this@ViewPagerActivity, "Selected ${tab?.text}", Toast.LENGTH_SHORT
                 ).show()
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
                 Toast.makeText(
-                    this@ViewPagerActivity,
-                    "Unselected ${tab?.text}",
-                    Toast.LENGTH_SHORT
+                    this@ViewPagerActivity, "Unselected ${tab?.text}", Toast.LENGTH_SHORT
                 ).show()
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
                 Toast.makeText(
-                    this@ViewPagerActivity,
-                    "Reselected ${tab?.text}",
-                    Toast.LENGTH_SHORT
+                    this@ViewPagerActivity, "Reselected ${tab?.text}", Toast.LENGTH_SHORT
                 ).show()
             }
         })

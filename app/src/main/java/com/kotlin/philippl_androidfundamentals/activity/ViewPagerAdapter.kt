@@ -2,10 +2,12 @@ package com.kotlin.philippl_androidfundamentals.activity
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityViewpagerItemBinding
 
-class ViewPagerAdapter(private val images: List<Int>) :
+class ViewPagerAdapter(private val images: List<Int>, private var listener: MyClickImage) :
     RecyclerView.Adapter<ViewPagerAdapter.ViewPagerViewHolder>() {
 
     inner class ViewPagerViewHolder(val binding: ActivityViewpagerItemBinding) :
@@ -20,12 +22,18 @@ class ViewPagerAdapter(private val images: List<Int>) :
     override fun onBindViewHolder(holder: ViewPagerViewHolder, position: Int) {
         holder.binding.apply {
             imageViewPager.setImageResource(images[position])
-
+            imageViewPager.setOnClickListener {
+                listener.click(images[position])
+            }
         }
     }
 
     override fun getItemCount(): Int {
         return images.size
+    }
+
+    interface MyClickImage {
+        fun click(img: Int)
     }
 
 }

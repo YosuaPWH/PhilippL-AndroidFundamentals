@@ -11,6 +11,10 @@ class ImageActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityImageBinding
 
+    companion object {
+        const val EXTRA_IMAGE = "EXTRA_IMAGE"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityImageBinding.inflate(layoutInflater)
@@ -24,7 +28,11 @@ class ImageActivity : AppCompatActivity() {
                 binding.imgvImage.setImageResource(0)
                 finish()
             }, 1000)
-            binding.imgvImage.setImageResource(R.drawable.theworldafterthefall)
+            if (intent.getIntExtra(EXTRA_IMAGE, 0) == 0) {
+                binding.imgvImage.setImageResource(R.drawable.theworldafterthefall)
+            } else {
+                binding.imgvImage.setImageResource(intent.getIntExtra(EXTRA_IMAGE, 0))
+            }
         }
     }
 
