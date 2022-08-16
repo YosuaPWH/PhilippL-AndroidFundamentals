@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kotlin.philippl_androidfundamentals.activity.RecyclerViewTodoAppActivity
+import com.kotlin.philippl_androidfundamentals.activity.SharedPreferencesActivity
+import com.kotlin.philippl_androidfundamentals.activity.SlideableMenuActivity
 import com.kotlin.philippl_androidfundamentals.activity.ViewPagerActivity
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityMainFragment2Binding
 import com.kotlin.philippl_androidfundamentals.fragment.FragmentActivity
@@ -38,6 +40,14 @@ class MainActivityFragmentSecond : Fragment() {
 
         binding.btnViewPager.setOnClickListener {
             startActivity(Intent(activity, ViewPagerActivity::class.java))
+        }
+
+        binding.btnSlideableMenu.setOnClickListener {
+            startActivity(Intent(activity, SlideableMenuActivity::class.java))
+        }
+
+        binding.btnSharedPreferences.setOnClickListener {
+            startActivity(Intent(activity, SharedPreferencesActivity::class.java))
         }
     }
 

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kotlin.philippl_androidfundamentals.activity.*
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityMainFragment1Binding
+import java.util.*
 
 class MainActivityFragmentFirst : Fragment() {
 

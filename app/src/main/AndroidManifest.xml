@@ -38,6 +38,8 @@
         <activity android:name=".activity.InflaterActivity" />
         <activity android:name=".fragment.FragmentActivity" />
         <activity android:name=".activity.ViewPagerActivity" />
+        <activity android:name=".activity.SlideableMenuActivity" />
+        <activity android:name=".activity.SharedPreferencesActivity" />
     </application>
 
 </manifest>
