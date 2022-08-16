@@ -21,21 +21,36 @@ class SharedPreferencesActivity : AppCompatActivity() {
         binding.btnSave.setOnClickListener {
             val firstName = binding.edtFirstName.text.toString()
             val lastName = binding.edtLastName.text.toString()
-            val age = binding.edtAge.text.toString().toInt()
+            val age = binding.edtAge.text.toString()
             val isAdult = binding.cbIsAdult.isChecked
 
             editor.apply {
-                putString("firstName", firstName)
-                putString("lastName", lastName)
-                putInt("age", age)
+                if (firstName.trim() == "") {
+                    putString("firstName", "")
+                } else {
+                    putString("firstName", firstName)
+                }
+
+                if (lastName.trim() == "") {
+                    putString("lastName", "")
+                } else {
+                    putString("lastName", lastName)
+                }
+
+                if (age.trim() == "") {
+                    putInt("age", 0)
+                } else {
+                    putInt("age", age.toInt())
+                }
+
                 putBoolean("isAdult", isAdult)
                 apply()
             }
         }
 
         binding.btnLoad.setOnClickListener {
-            val firstName = sharedPref.getString("firstName", null)
-            val lastName = sharedPref.getString("lastName", null)
+            val firstName = sharedPref.getString("firstName", "")
+            val lastName = sharedPref.getString("lastName", "")
             val age = sharedPref.getInt("age", 0).toString()
             val isAdult = sharedPref.getBoolean("isAdult", false)
 
@@ -43,6 +58,7 @@ class SharedPreferencesActivity : AppCompatActivity() {
             binding.edtLastName.setText(lastName)
             binding.edtAge.setText(age)
             binding.cbIsAdult.isChecked = isAdult
+
         }
     }
 

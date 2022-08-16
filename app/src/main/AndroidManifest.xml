@@ -40,6 +40,7 @@
         <activity android:name=".activity.ViewPagerActivity" />
         <activity android:name=".activity.SlideableMenuActivity" />
         <activity android:name=".activity.SharedPreferencesActivity" />
+        <activity android:name=".activity.NotificationActivity" />
     </application>
 
 </manifest>

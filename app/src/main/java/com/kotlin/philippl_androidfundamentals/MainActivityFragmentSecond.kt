@@ -6,10 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.kotlin.philippl_androidfundamentals.activity.RecyclerViewTodoAppActivity
-import com.kotlin.philippl_androidfundamentals.activity.SharedPreferencesActivity
-import com.kotlin.philippl_androidfundamentals.activity.SlideableMenuActivity
-import com.kotlin.philippl_androidfundamentals.activity.ViewPagerActivity
+import com.kotlin.philippl_androidfundamentals.activity.*
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityMainFragment2Binding
 import com.kotlin.philippl_androidfundamentals.fragment.FragmentActivity
 
@@ -48,6 +45,10 @@ class MainActivityFragmentSecond : Fragment() {
 
         binding.btnSharedPreferences.setOnClickListener {
             startActivity(Intent(activity, SharedPreferencesActivity::class.java))
+        }
+
+        binding.btnNotifications.setOnClickListener {
+            startActivity(Intent(activity, NotificationActivity::class.java))
         }
     }
 
