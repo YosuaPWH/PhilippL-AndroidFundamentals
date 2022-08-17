@@ -1,4 +1,4 @@
-package com.kotlin.philippl_androidfundamentals.activity
+package com.kotlin.philippl_androidfundamentals.viewpager
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kotlin.philippl_androidfundamentals.R
+import com.kotlin.philippl_androidfundamentals.activity.ImageActivity
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityViewpagerMainBinding
 
 class ViewPagerActivity : AppCompatActivity() {
@@ -72,6 +73,6 @@ class ViewPagerActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         finish()
-        return super.onSupportNavigateUp()
+        return true
     }
 }

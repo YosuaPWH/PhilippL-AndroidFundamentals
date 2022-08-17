@@ -1,4 +1,4 @@
-package com.kotlin.philippl_androidfundamentals.activity
+package com.kotlin.philippl_androidfundamentals.service
 
 import android.app.IntentService
 import android.content.Intent

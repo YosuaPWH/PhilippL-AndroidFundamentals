@@ -1,10 +1,8 @@
-package com.kotlin.philippl_androidfundamentals.activity
+package com.kotlin.philippl_androidfundamentals.viewpager
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager.widget.ViewPager
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityViewpagerItemBinding
 
 class ViewPagerAdapter(private val images: List<Int>, private var listener: MyClickImage) :

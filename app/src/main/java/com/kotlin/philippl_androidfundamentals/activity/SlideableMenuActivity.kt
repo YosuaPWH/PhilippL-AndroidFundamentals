@@ -8,6 +8,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import com.kotlin.philippl_androidfundamentals.R
 import com.kotlin.philippl_androidfundamentals.databinding.ActivitySlideableMainBinding
+import com.kotlin.philippl_androidfundamentals.viewpager.ViewPagerActivity
 
 class SlideableMenuActivity : AppCompatActivity() {
 
@@ -45,7 +46,7 @@ class SlideableMenuActivity : AppCompatActivity() {
         if (toggle.onOptionsItemSelected(item)) {
             return true
         }
-        return super.onOptionsItemSelected(item)
+        return true
     }
 
 }

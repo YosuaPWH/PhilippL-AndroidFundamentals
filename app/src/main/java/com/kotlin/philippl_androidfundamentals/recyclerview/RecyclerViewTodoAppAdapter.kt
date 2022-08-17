@@ -1,4 +1,4 @@
-package com.kotlin.philippl_androidfundamentals.activity
+package com.kotlin.philippl_androidfundamentals.recyclerview
 
 import android.graphics.Paint.STRIKE_THRU_TEXT_FLAG
 import android.view.LayoutInflater

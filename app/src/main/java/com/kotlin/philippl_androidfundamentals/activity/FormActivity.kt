@@ -56,6 +56,6 @@ class FormActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         finish()
-        return super.onSupportNavigateUp()
+        return true
     }
 }

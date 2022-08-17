@@ -7,8 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kotlin.philippl_androidfundamentals.activity.*
+import com.kotlin.philippl_androidfundamentals.broadcast_receiver.BroadcastReceiverActivity
 import com.kotlin.philippl_androidfundamentals.databinding.ActivityMainFragment2Binding
 import com.kotlin.philippl_androidfundamentals.fragment.FragmentActivity
+import com.kotlin.philippl_androidfundamentals.recyclerview.RecyclerViewTodoAppActivity
+import com.kotlin.philippl_androidfundamentals.service.MainIntentServiceActivity
+import com.kotlin.philippl_androidfundamentals.viewpager.ViewPagerActivity
 
 class MainActivityFragmentSecond : Fragment() {
 
@@ -53,6 +57,14 @@ class MainActivityFragmentSecond : Fragment() {
 
         binding.btnIntentService.setOnClickListener {
             startActivity(Intent(activity, MainIntentServiceActivity::class.java))
+        }
+
+        binding.btnDragAndDrop.setOnClickListener {
+            startActivity(Intent(activity, DragAndDropActivity::class.java))
+        }
+
+        binding.btnBroadcastReceiver.setOnClickListener {
+            startActivity(Intent(activity, BroadcastReceiverActivity::class.java))
         }
     }
 
